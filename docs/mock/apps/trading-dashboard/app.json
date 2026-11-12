@@ -1,0 +1,14 @@
+{
+  "name": "trading-dashboard",
+  "title": "Stock Trading Dashboard",
+  "spec": "docs/project/context.md",
+  "walkthroughs": [
+    {
+      "id": "analyze-stock",
+      "title": "Analyzing a stock with technical indicators",
+      "description": "A trader logs in, browses the stock list, selects a stock, and uses technical indicators and MA Crossover strategy for analysis.",
+      "sequenceFile": "sequences/analyze-stock.json",
+      "seedData": "mock-app/mock-data/seeds/analyze-stock.json"
+    }
+  ]
+}

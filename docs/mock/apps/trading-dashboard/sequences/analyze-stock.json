@@ -1,0 +1,124 @@
+{
+  "id": "analyze-stock",
+  "title": "Analyzing a stock with technical indicators",
+  "description": "A trader logs in, browses the stock list, selects a stock, and uses technical indicators and MA Crossover strategy for analysis.",
+  "startStep": "login",
+  "completionMessage": "You have successfully analyzed a stock using technical indicators and the Moving Average Crossover strategy. This analysis helps traders make informed trading decisions.",
+  "steps": {
+    "login": {
+      "user": "trader",
+      "screen": "S01",
+      "proposedAction": "Log in with email and password",
+      "infoPanel": [
+        { "key": "auth", "label": "Status" }
+      ],
+      "actions": {
+        "login-action": {
+          "performedText": "clicked Login",
+          "nextStep": "stock-list",
+          "stateChange": {
+            "auth.isLoggedIn": { "set": true },
+            "auth.user": { "set": "Arun Kumar" }
+          }
+        }
+      }
+    },
+    "stock-list": {
+      "user": "trader",
+      "screen": "S02",
+      "proposedAction": "Select RELIANCE to analyze",
+      "infoPanel": [
+        { "key": "stocks.length", "label": "Available Stocks" }
+      ],
+      "actions": {
+        "select-stock": {
+          "performedText": "selected RELIANCE stock",
+          "nextStep": "chart-view",
+          "stateChange": {
+            "selectedStock": { "set": "RELIANCE" }
+          }
+        }
+      }
+    },
+    "chart-view": {
+      "user": "trader",
+      "screen": "S03",
+      "proposedAction": "Enable SMA indicator to see moving average",
+      "infoPanel": [
+        { "key": "selectedStock", "label": "Stock" },
+        { "key": "chartData.RELIANCE.lastUpdate", "label": "Last Update" }
+      ],
+      "actions": {
+        "toggle-sma": {
+          "performedText": "toggled SMA on",
+          "nextStep": "sma-enabled",
+          "stateChange": {
+            "indicators.sma.enabled": { "set": true }
+          }
+        }
+      }
+    },
+    "sma-enabled": {
+      "user": "trader",
+      "screen": "S03",
+      "proposedAction": "Enable RSI indicator for momentum analysis",
+      "infoPanel": [
+        { "key": "indicators.sma.enabled", "label": "SMA Active" }
+      ],
+      "actions": {
+        "toggle-rsi": {
+          "performedText": "toggled RSI on",
+          "nextStep": "rsi-enabled",
+          "stateChange": {
+            "indicators.rsi.enabled": { "set": true }
+          }
+        }
+      }
+    },
+    "rsi-enabled": {
+      "user": "trader",
+      "screen": "S03",
+      "proposedAction": "Enable Bollinger Bands for volatility analysis",
+      "infoPanel": [
+        { "key": "indicators.rsi.enabled", "label": "RSI Active" }
+      ],
+      "actions": {
+        "toggle-bollinger": {
+          "performedText": "toggled Bollinger Bands on",
+          "nextStep": "strategy-view",
+          "stateChange": {
+            "indicators.bollinger.enabled": { "set": true }
+          }
+        }
+      }
+    },
+    "strategy-view": {
+      "user": "trader",
+      "screen": "S03",
+      "proposedAction": "Enable MA Crossover strategy to see buy/sell signals",
+      "infoPanel": [
+        { "key": "indicators.bollinger.enabled", "label": "Bollinger Bands Active" }
+      ],
+      "actions": {
+        "toggle-strategy": {
+          "performedText": "enabled MA Crossover strategy",
+          "nextStep": "signals-visible",
+          "stateChange": {
+            "maStrategy.enabled": { "set": true }
+          }
+        }
+      }
+    },
+    "signals-visible": {
+      "user": "trader",
+      "screen": "S03",
+      "proposedAction": "Review the signals and analysis results",
+      "infoPanel": [
+        { "key": "maStrategy.enabled", "label": "MA Crossover Active" },
+        { "key": "selectedStock", "label": "Stock" }
+      ],
+      "performedText": "completed analysis",
+      "nextStep": null
+    }
+  }
+}

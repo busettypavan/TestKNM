@@ -1,0 +1,5 @@
+table,pk,important_fields,description,feedback,status
+users,id,"email, password_hash",User accounts for authentication and position ownership,,New
+stocks,id,"symbol, name, sector",NSE Nifty-100 curated stock list,,New
+price_history,id,"stock_id, date, close, volume",Daily OHLCV data cached from Yahoo Finance. (stock_id, date) is unique per stock.,,New
+positions,id,"user_id, stock_id, quantity, buy_price, buy_date",Trading position lots entered by user. Multiple lots per stock allowed.,,New

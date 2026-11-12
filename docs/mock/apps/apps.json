@@ -1,0 +1,9 @@
+{
+  "apps": [
+    {
+      "name": "trading-dashboard",
+      "title": "Stock Trading Dashboard",
+      "platform": "desktop"
+    }
+  ]
+}

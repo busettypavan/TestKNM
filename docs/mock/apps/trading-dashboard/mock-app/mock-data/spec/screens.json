@@ -1,0 +1,29 @@
+[
+  {
+    "code": "S01",
+    "name": "Login",
+    "section": "Auth",
+    "type": "form",
+    "mode": "entry",
+    "buttons": ["login"],
+    "fields": ["email", "password"]
+  },
+  {
+    "code": "S02",
+    "name": "Stock List",
+    "section": "Browsing",
+    "type": "list",
+    "mode": "browsing",
+    "buttons": ["search", "select-stock"],
+    "fields": ["search-symbol", "search-name"]
+  },
+  {
+    "code": "S03",
+    "name": "Stock Chart with Indicators",
+    "section": "Analysis",
+    "type": "chart",
+    "mode": "analysis",
+    "buttons": ["toggle-indicator", "toggle-strategy", "back-to-list"],
+    "fields": ["sma-toggle", "ema-toggle", "rsi-toggle", "bollinger-toggle", "macd-toggle", "stochastic-toggle", "atr-toggle", "vwap-toggle", "obv-toggle", "sar-toggle", "ma-crossover-toggle"]
+  }
+]

@@ -1,0 +1,81 @@
+{
+  "_sample": "Sample data for stock analysis walkthrough",
+  "auth": {
+    "isLoggedIn": false,
+    "user": null
+  },
+  "stocks": [
+    {
+      "symbol": "RELIANCE",
+      "name": "Reliance Industries",
+      "sector": "Energy",
+      "currentPrice": 2845.50,
+      "dayChange": 45.25,
+      "dayChangePercent": 1.62
+    },
+    {
+      "symbol": "TCS",
+      "name": "Tata Consultancy Services",
+      "sector": "IT",
+      "currentPrice": 3920.75,
+      "dayChange": -28.50,
+      "dayChangePercent": -0.72
+    },
+    {
+      "symbol": "INFY",
+      "name": "Infosys Limited",
+      "sector": "IT",
+      "currentPrice": 2150.40,
+      "dayChange": 32.10,
+      "dayChangePercent": 1.52
+    },
+    {
+      "symbol": "HDFC",
+      "name": "HDFC Bank",
+      "sector": "Banking",
+      "currentPrice": 1845.80,
+      "dayChange": 18.75,
+      "dayChangePercent": 1.03
+    },
+    {
+      "symbol": "WIPRO",
+      "name": "Wipro Limited",
+      "sector": "IT",
+      "currentPrice": 428.50,
+      "dayChange": 5.25,
+      "dayChangePercent": 1.24
+    }
+  ],
+  "selectedStock": null,
+  "chartData": {
+    "RELIANCE": {
+      "symbol": "RELIANCE",
+      "name": "Reliance Industries",
+      "prices": [
+        { "date": "2026-11-05", "open": 2780.00, "high": 2795.00, "low": 2770.00, "close": 2785.50, "volume": 5240000 },
+        { "date": "2026-11-06", "open": 2790.00, "high": 2810.00, "low": 2785.00, "close": 2805.00, "volume": 4890000 },
+        { "date": "2026-11-07", "open": 2800.00, "high": 2835.00, "low": 2800.00, "close": 2830.00, "volume": 6120000 },
+        { "date": "2026-11-08", "open": 2825.00, "high": 2845.00, "low": 2820.00, "close": 2835.00, "volume": 5670000 },
+        { "date": "2026-11-12", "open": 2840.00, "high": 2850.00, "low": 2835.00, "close": 2845.50, "volume": 5980000 }
+      ],
+      "lastUpdate": "2026-11-12 16:00 IST"
+    }
+  },
+  "indicators": {
+    "sma": { "enabled": false, "period": 50 },
+    "ema": { "enabled": false, "period": 20 },
+    "rsi": { "enabled": false, "period": 14 },
+    "bollinger": { "enabled": false, "period": 20 },
+    "macd": { "enabled": false },
+    "stochastic": { "enabled": false, "period": 14 },
+    "atr": { "enabled": false, "period": 14 },
+    "vwap": { "enabled": false },
+    "obv": { "enabled": false },
+    "sar": { "enabled": false }
+  },
+  "maStrategy": {
+    "enabled": false,
+    "maPeriod": 50,
+    "signals": []
+  }
+}
